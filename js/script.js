@@ -36,3 +36,9 @@ const chiediNumeriUtente = (quantita) => {
 const confrontaNumeri = (originali, inseriti) => {
   return originali.filter((num) => inseriti.includes(num));
 };
+
+// Funzione per nascondere i numeri
+const nascondiNumeri = () => {
+  const displayNumeri = document.getElementById("numeri");
+  displayNumeri.textContent = ""; // Rimuovi il contenuto del div
+};
