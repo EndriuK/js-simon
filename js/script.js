@@ -20,3 +20,14 @@ const avviaTimer = (durata, display, callback) => {
     }
   }, 1000);
 };
+
+// Funzione per chiedere all'utente di inserire i numeri
+const chiediNumeriUtente = (quantita) => {
+  const numeriUtente = [];
+  for (let i = 0; i < quantita; i++) {
+    numeriUtente.push(
+      parseInt(prompt(`Inserisci il numero ${i + 1} di ${quantita}`), 10)
+    );
+  }
+  return numeriUtente;
+};
