@@ -1,5 +1,3 @@
-
-
 // Funzione per generare numeri casuali unici
 const generaNumeriCasuali = (quantita, min, max) => {
   const numeri = new Set();
@@ -61,4 +59,10 @@ avviaTimer(30, displayTimer, () => {
   // Confronta i numeri
   const numeriCorretti = confrontaNumeri(numeriCasuali, numeriUtente);
 
- 
+  // Mostra i risultati
+  alert(
+    `Hai inserito: ${numeriUtente.join(", ")}\nHai indovinato ${
+      numeriCorretti.length
+    } numeri: ${numeriCorretti.join(", ")}`
+  );
+});
