@@ -55,4 +55,10 @@ const displayTimer = document.getElementById("timer");
 avviaTimer(30, displayTimer, () => {
   nascondiNumeri(); // Nascondi i numeri dopo il countdown
 
+  // Chiedi all'utente di inserire i numeri
+  const numeriUtente = chiediNumeriUtente(5);
+
+  // Confronta i numeri
+  const numeriCorretti = confrontaNumeri(numeriCasuali, numeriUtente);
+
  
