@@ -1,12 +1,8 @@
-// ARRAY NUMERI RANDOM
-let randomNumbers = [];
-
-// CICLO WHILE
-while (randomNumbers.length < 5) {
-  let randomNumber = Math.floor(Math.random() * 100) + 1;
-  if (!randomNumbers.includes(randomNumber)) {
-    randomNumbers.push(randomNumber);
+// Funzione per generare numeri casuali unici
+const generaNumeriCasuali = (quantita, min, max) => {
+  const numeri = new Set();
+  while (numeri.size < quantita) {
+    numeri.add(Math.floor(Math.random() * (max - min + 1)) + min);
   }
-}
-
-console.log(randomNumbers);
+  return [...numeri];
+};
