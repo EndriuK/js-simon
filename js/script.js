@@ -6,3 +6,17 @@ const generaNumeriCasuali = (quantita, min, max) => {
   }
   return [...numeri];
 };
+
+// Funzione per avviare il timer
+const avviaTimer = (durata, display, callback) => {
+  let timer = durata;
+  const intervallo = setInterval(() => {
+    const minuti = String(Math.floor(timer / 60)).padStart(2, "0");
+    const secondi = String(timer % 60).padStart(2, "0");
+    display.textContent = `${minuti}:${secondi}`;
+    if (--timer < 0) {
+      clearInterval(intervallo);
+      callback();
+    }
+  }, 1000);
+};
