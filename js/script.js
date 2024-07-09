@@ -1,3 +1,5 @@
+
+
 // Funzione per generare numeri casuali unici
 const generaNumeriCasuali = (quantita, min, max) => {
   const numeri = new Set();
@@ -47,3 +49,10 @@ const nascondiNumeri = () => {
 const numeriCasuali = generaNumeriCasuali(5, 1, 100);
 const displayNumeri = document.getElementById("numeri");
 displayNumeri.textContent = numeriCasuali.join(" ");
+
+// Avvia il timer di 30 secondi
+const displayTimer = document.getElementById("timer");
+avviaTimer(30, displayTimer, () => {
+  nascondiNumeri(); // Nascondi i numeri dopo il countdown
+
+ 
