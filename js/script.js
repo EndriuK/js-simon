@@ -42,3 +42,8 @@ const nascondiNumeri = () => {
   const displayNumeri = document.getElementById("numeri");
   displayNumeri.textContent = ""; // Rimuovi il contenuto del div
 };
+
+// Genera 5 numeri casuali
+const numeriCasuali = generaNumeriCasuali(5, 1, 100);
+const displayNumeri = document.getElementById("numeri");
+displayNumeri.textContent = numeriCasuali.join(" ");
