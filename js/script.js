@@ -31,3 +31,8 @@ const chiediNumeriUtente = (quantita) => {
   }
   return numeriUtente;
 };
+
+// Funzione per confrontare i numeri
+const confrontaNumeri = (originali, inseriti) => {
+  return originali.filter((num) => inseriti.includes(num));
+};
